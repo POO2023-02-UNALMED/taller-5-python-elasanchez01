@@ -1,4 +1,4 @@
-from gestion.zonas import Zona
+from gestion.zona import Zona
 from zooAnimales.animal import Animal
 
 class Zoologico():
