@@ -1,3 +1,4 @@
+from gestion.zoologico import Zoologico
 from zooAnimales.Animal import Animal
 
 class Zona:
