@@ -1,22 +1,42 @@
-from Animal import Animal
+from zooAnimales.animal import Animal
 
 class Pez(Animal):
+    _listado = []
+    salmones = 0
+    bacalaos = 0
+    
+    def __init__(self, nombre, edad, habitat, genero, colorEscamas, cantidadAletas):
+        super().__init__(nombre, edad, habitat, genero)
+        self._colorEscamas = colorEscamas
+        self._cantidadAletas = cantidadAletas
+        Pez._listado.append(self)
 
-    def __init__(self):
-        self.listado = []
-        self.salmones
-        self.balacaos
-        self._colorEscamas
-        self._cantidadAletas
+    @staticmethod
+    def cantidadPeces():
+        return len(Pez._listado)
+    
+    @staticmethod
+    def movimiento():
+        return "volar"
+    
+    @classmethod
+    def crearSalmon(cls, nombre, edad, genero):
+        cls.salmones += 1 
+        return cls(nombre, edad, "oceano", genero, "rojo", 6)
 
-    def cantidadPeces(self):
-        pass
+    @classmethod
+    def crearBacalao(cls, nombre, edad, genero):
+        cls.bacalaos += 1 
+        return cls(nombre, edad, "oceano", genero, "gris", 6)
 
-    def movimiento(self):
-        pass
+    def getColorEscamas(self):
+        return self._colorEscamas
 
-    def crearIguana(self):
-        pass
+    def setColorEscamas(self, colorEscamas):
+        self._colorEscamas = colorEscamas
 
-    def crearSerpiente(self):
-        pass
+    def getCantidadAletas(self):
+        return self._cantidadAletas
+    
+    def setCantidadAletas(self, cantidadAletas):
+        self._cantidadAletas = cantidadAletas
