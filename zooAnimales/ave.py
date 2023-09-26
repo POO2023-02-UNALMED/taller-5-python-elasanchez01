@@ -5,7 +5,7 @@ class Ave(Animal):
     halcones = 0
     aquilas = 0
 
-     def __init__(self, nombre, edad, habitat, genero, colorPlumas):
+    def __init__(self, nombre, edad, habitat, genero, colorPlumas):
         super().__init__(nombre, edad, habitat, genero)
         self._colorPlumas = colorPlumas
         Ave._listado.append(self)
@@ -33,3 +33,6 @@ class Ave(Animal):
 
     def setColorPlumas(self, colorPlumas):
         self._colorPlumas = colorPlumas
+
+
+     
