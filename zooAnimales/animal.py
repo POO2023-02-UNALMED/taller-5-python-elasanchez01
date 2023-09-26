@@ -4,10 +4,10 @@ class Animal():
     _totalAnimales = 0
     _zona = ""
 
-    def __init__(self, nombre, edad, habitad, genero):
+    def __init__(self, nombre, edad, habitat, genero):
         self._nombre = nombre
         self._edad = edad
-        self._habitad = habitad
+        self._habitat = habitat
         self._genero = genero
         Animal._totalAnimales += 1
 
